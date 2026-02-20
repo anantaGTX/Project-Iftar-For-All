@@ -1,7 +1,7 @@
 const METHODS = {
-  bkash: { label: "bKash", number: "01XXXXXXXXX", accentVar: "--bkash" },
-  nagad: { label: "Nagad", number: "01YYYYYYYYY", accentVar: "--nagad" },
-  upay:  { label: "Upay",  number: "01ZZZZZZZZZ", accentVar: "--upay"  }
+  bkash: { label: "bKash", number: "01730995590", accentVar: "--bkash" },
+  nagad: { label: "Nagad", number: "01707325577", accentVar: "--nagad" },
+  upay:  { label: "Upay",  number: "01634845489", accentVar: "--upay"  }
 };
 
 const GOAL_TOTAL = 1000;
@@ -193,4 +193,5 @@ shareBtn.addEventListener("click", sharePage);
 /* Init */
 setTabIcons();
 applyMethod(currentMethod);
+
 loadProgress();
