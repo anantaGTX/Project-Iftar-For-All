@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Project Iftar For All • Donate</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="bg" aria-hidden="true">
+    <div class="radial r1"></div>
+    <div class="radial r2"></div>
+    <div class="pattern"></div>
+    <div class="noise"></div>
+  </div>
+
+  <main class="wrap">
+    <header class="header">
+      <div class="mark" aria-hidden="true"></div>
+
+      <div class="charity">
+        <img class="charityLogo" src="logo.png" alt="Project Iftar For All logo" />
+      </div>
+
+      <div class="titles">
+        <h1>Project Iftar For All</h1>
+        <p>
+          “Who is it that would loan Allah a goodly loan so He may multiply it for him many times over?”
+          <span class="ref">[2:245]</span>
+        </p>
+      </div>
+    </header>
+
+    <section class="card" aria-label="Donation options">
+      <div class="tabs" role="tablist" aria-label="Payment methods">
+        <button class="tab active" role="tab" aria-selected="true" data-method="bkash">
+          <span class="tabIcon" data-icon="bkash" aria-hidden="true"></span>
+          <span class="tabText">bKash</span>
+        </button>
+
+        <button class="tab" role="tab" aria-selected="false" data-method="nagad">
+          <span class="tabIcon" data-icon="nagad" aria-hidden="true"></span>
+          <span class="tabText">Nagad</span>
+        </button>
+
+        <button class="tab" role="tab" aria-selected="false" data-method="upay">
+          <span class="tabIcon" data-icon="upay" aria-hidden="true"></span>
+          <span class="tabText">Upay</span>
+        </button>
+
+        <div class="tabIndicator" aria-hidden="true"></div>
+      </div>
+
+      <div class="body">
+        <div class="topRow">
+          <div class="pill" id="pill">
+            <span class="pillIcon" id="pillIcon" aria-hidden="true"></span>
+            <div class="pillStack">
+              <div class="pillTitle" id="methodName">bKash</div>
+              <div class="pillSub">Donation Number</div>
+            </div>
+          </div>
+
+          <div class="bless">
+            <span class="spark">✦</span>
+            <span>Thanks for donating</span>
+          </div>
+        </div>
+
+        <!-- GOAL PROGRESS -->
+        <div class="goal">
+          <div class="goalTop">
+            <div class="goalTitle">Iftar Meals Goal</div>
+            <div class="goalStat" id="goalStat">0 / 1000</div>
+          </div>
+
+          <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="1000" aria-valuenow="0">
+            <div class="barFill" id="barFill"></div>
+            <div class="barShine" aria-hidden="true"></div>
+          </div>
+
+          <div class="goalNote" id="goalNote">Loading progress…</div>
+        </div>
+
+        <!-- NUMBER (tap to copy) -->
+        <button class="numberCard" id="numberCard" type="button" aria-label="Tap to copy number">
+          <div class="number" id="donationNumber">01XXXXXXXXX</div>
+          <div class="hint">Tap the number to copy</div>
+        </button>
+
+        <div class="actions">
+          <button class="btn primary" id="copyBtn" type="button">
+            <span class="i">⧉</span> Copy
+          </button>
+          <button class="btn" id="shareBtn" type="button">
+            <span class="i">⤴</span> Share
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span class="muted pillFoot">Help Us Serve <b>1,000 Iftar Meals</b> This Ramadan</span>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
