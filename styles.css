@@ -313,6 +313,54 @@ body{
   background: rgba(231,216,168,.18);
   border-color: rgba(231,216,168,.35);
 }
+/* ================= SOCIAL ================= */
+
+.social{
+  margin-top: 26px;
+  text-align: center;
+}
+
+.socialTitle{
+  font-weight: 900;
+  margin-bottom: 14px;
+  font-size: 15px;
+  letter-spacing: .02em;
+  color: rgba(231,216,168,.95);
+}
+
+.socialLinks{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  flex-wrap:wrap;
+}
+
+.socialBtn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:11px 16px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:900;
+  font-size:14px;
+  border:1px solid rgba(231,216,168,.30);
+  background: rgba(255,255,255,.05);
+  color:#fff;
+  transition:.2s ease;
+  backdrop-filter: blur(10px);
+}
+
+.socialBtn:hover{
+  background: rgba(231,216,168,.15);
+  border-color: rgba(231,216,168,.60);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(231,216,168,.25);
+}
+
+.socialBtn svg{
+  opacity:.9;
+}
 
 /* Footer */
 .footer{margin-top:22px;text-align:center}
