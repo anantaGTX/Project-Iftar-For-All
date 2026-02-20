@@ -193,5 +193,4 @@ shareBtn.addEventListener("click", sharePage);
 /* Init */
 setTabIcons();
 applyMethod(currentMethod);
-
 loadProgress();
