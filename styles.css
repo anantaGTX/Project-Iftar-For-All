@@ -313,6 +313,121 @@ body{
   background: rgba(231,216,168,.18);
   border-color: rgba(231,216,168,.35);
 }
+/* ================= TEAM ================= */
+
+.team{
+  margin-top: 26px;
+  padding: 18px;
+  border-radius: 22px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(231,216,168,.14);
+  box-shadow: 0 18px 60px rgba(0,0,0,.22);
+}
+
+.teamHead{
+  text-align:center;
+  margin-bottom: 16px;
+}
+
+.teamTitle{
+  margin: 0;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  color: rgba(231,216,168,.95);
+}
+
+.teamSub{
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: rgba(255,255,255,.62);
+}
+
+.teamGrid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.member{
+  border-radius: 20px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.10);
+  overflow:hidden;
+  box-shadow: 0 14px 50px rgba(0,0,0,.20);
+  transition: transform .18s ease, border-color .18s ease, background .18s ease;
+}
+
+.member:hover{
+  transform: translateY(-3px);
+  border-color: rgba(231,216,168,.22);
+  background: rgba(255,255,255,.06);
+}
+
+/* Frame that fits ANY image size nicely */
+.frame{
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;   /* portrait frame */
+  background: rgba(0,0,0,.25);
+  border-bottom: 1px solid rgba(231,216,168,.14);
+  overflow: hidden;
+}
+
+/* Premium gold edge + soft highlight */
+.frame::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(180deg, rgba(231,216,168,.10), transparent 55%);
+  pointer-events:none;
+}
+
+.frame img{
+  width:100%;
+  height:100%;
+  object-fit: cover;     /* this is the magic: any size image fits */
+  object-position: center;
+  display:block;
+  transform: scale(1.01);
+}
+
+/* Details box */
+.memberInfo{
+  padding: 14px 14px 16px;
+  text-align: center;
+}
+
+.memberName{
+  font-weight: 900;
+  font-size: 15px;
+  letter-spacing: -0.01em;
+}
+
+.memberUni{
+  margin-top: 4px;
+  font-size: 12.8px;
+  color: rgba(255,255,255,.65);
+}
+
+.memberNum{
+  margin-top: 10px;
+  display:inline-block;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(231,216,168,.20);
+  background: rgba(231,216,168,.10);
+  font-weight: 900;
+  letter-spacing: .08em;
+  color: rgba(255,255,255,.95);
+  font-family: "Space Grotesk", Inter, system-ui, sans-serif;
+}
+
+/* Responsive */
+@media (max-width: 860px){
+  .teamGrid{ grid-template-columns: 1fr; }
+  .frame{ aspect-ratio: 16 / 12; } /* nicer on mobile */
+}
 /* ================= SOCIAL ================= */
 
 .social{
@@ -399,3 +514,4 @@ body{
   .number{font-size:26px; letter-spacing:.12em}
   .charity{width:56px;height:56px}
 }
+
